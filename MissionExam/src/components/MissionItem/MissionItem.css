@@ -1,0 +1,15 @@
+.MissionItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #35c535; 
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 2200px;
+    display: flex;
+    flex-direction: column;
+    
+  
+}
