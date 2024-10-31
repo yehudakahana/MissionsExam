@@ -4,7 +4,7 @@ import axios from 'axios'
 import MissionItem from '../MissionItem/MissionItem'
 
 export interface Mission {
-    id?: string
+    _id?: string
     name: string
     status: string
     priority: string
@@ -43,6 +43,7 @@ const MissionManagement: React.FC = () => {
   
     const deleteMission = async (id: string): Promise<void> => {
       try {
+        console.log(`id:${id}`)
         await axios.delete(`${BASE_URL}/${id}`);
         getMissions();
       } catch (error) {
@@ -54,9 +55,10 @@ const MissionManagement: React.FC = () => {
   return (
     <div>
         <MissionForm addMission={addMission} />
+
         {Missions.map((mission) => (
           <MissionItem
-          key={mission.id}
+          key={mission._id}
             mission={mission}
             deleteMission={deleteMission}
           />

@@ -14,7 +14,7 @@ const MissionItem: React.FC<MissionItemProps> = ({ mission, deleteMission }) => 
       <p>status:{mission.status}</p>
       <p>priority:{mission.priority}</p>
       <p>description:{mission.description}</p>
-      <button onClick={() => deleteMission(mission.id!)}>Delete Mission</button>
+      <button onClick={() => deleteMission(mission._id!)}>Delete Mission</button>
     </div>
   );
 }

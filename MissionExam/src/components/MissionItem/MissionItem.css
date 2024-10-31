@@ -3,13 +3,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #35c535; 
+    background-color: #dde1e4; 
     padding: 20px;
     border-radius: 8px;
     max-width: 500px;
     width: 2200px;
     display: flex;
     flex-direction: column;
+    margin: 10px;
     
   
 }
+button {
+    background-color: #e0b8b8; 
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
