@@ -43,11 +43,20 @@ const MissionManagement: React.FC = () => {
   
     const deleteMission = async (id: string): Promise<void> => {
       try {
-        console.log(`id:${id}`)
         await axios.delete(`${BASE_URL}/${id}`);
         getMissions();
       } catch (error) {
         console.error("cant delete mission", error);
+      }
+    };
+
+    const updateMission = async (_id: string): Promise<void> => {
+      try {
+        console.log(_id)
+        await axios.post(`${BASE_URL}/progress/${_id}`);
+        getMissions();
+      } catch (error) {
+        console.error("cant update mission", error);
       }
     };
 
@@ -61,6 +70,7 @@ const MissionManagement: React.FC = () => {
           key={mission._id}
             mission={mission}
             deleteMission={deleteMission}
+            updateMission={updateMission}
           />
         ))}
         
